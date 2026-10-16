@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MHT CET Candidate Registration</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-container">
+    <header class="header">
+      <!-- Group 1: Header logo (1 element) -->
+      <span class="logo">MHT CET</span>
+
+      <!-- Group 2: Navigation links (4 elements) -->
+      <nav class="nav">
+        <a href="#register">Register</a>
+        <a href="#login">Login</a>
+        <a href="#dates">Important Dates</a>
+        <a href="#help">Help</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Progressive disclosure heading (plain text, excluded from 25-element inventory per specification) -->
+      <h1 class="heading">Step 1 of 3</h1>
+
+      <form id="regForm">
+        <!-- Group 3: Personal details (8 elements: 4 field labels, 4 text inputs) -->
+        <div class="form-block">
+          <div class="field">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="As per SSC Marksheet" required>
+          </div>
+          <div class="field">
+            <label for="mobile">Mobile Number</label>
+            <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" required>
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="name@example.com" required>
+          </div>
+          <div class="field">
+            <label for="dob">Date of Birth</label>
+            <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" required>
+          </div>
+        </div>
+
+        <!-- Group 4: Exam details (6 elements: 2 field labels, 2 dropdowns, 2 radio buttons) -->
+        <div class="form-block">
+          <div class="field">
+            <label for="category">Category</label>
+            <select id="category" name="category" required>
+              <option value="" disabled selected>Select category</option>
+              <option value="OPEN">Open / General</option>
+              <option value="OBC">Other Backward Class (OBC)</option>
+              <option value="SC">Scheduled Caste (SC)</option>
+              <option value="ST">Scheduled Tribe (ST)</option>
+              <option value="EWS">Economically Weaker Section (EWS)</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="domicile">Domicile</label>
+            <select id="domicile" name="domicile" required>
+              <option value="" disabled selected>Select domicile state</option>
+              <option value="maharashtra">Maharashtra State</option>
+              <option value="oms">Outside Maharashtra State (OMS)</option>
+              <option value="jk">Jammu &amp; Kashmir Migrant</option>
+            </select>
+          </div>
+          <div class="field radio-field">
+            <label class="radio-label">
+              <input type="radio" name="subjectGroup" value="PCM" checked> PCM
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="subjectGroup" value="PCB"> PCB
+            </label>
+          </div>
+        </div>
+
+        <!-- Group 5: Declaration (1 element: 1 checkbox) -->
+        <div class="field checkbox-field">
+          <label class="checkbox-label">
+            <input type="checkbox" id="declaration" name="declaration" required> I confirm the details are correct
+          </label>
+        </div>
+
+        <!-- Group 6: Form buttons (2 elements: 1 primary button, 1 secondary button) -->
+        <div class="btn-group">
+          <button type="submit" class="btn btn-primary">Continue</button>
+          <button type="button" class="btn btn-secondary">Login</button>
+        </div>
+      </form>
+    </main>
+
+    <!-- Group 7: Footer links (3 elements) -->
+    <footer class="footer">
+      <a href="#contact">Contact</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#help-footer">Help</a>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('regForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Step 1 complete. Proceeding to Step 2...');
+    });
+  </script>
+</body>
+</html>
