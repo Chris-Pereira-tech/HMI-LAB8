@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minimal MHT CET candidate registration redesign for HCI screen complexity analysis.">
   <title>MHT CET Candidate Registration</title>
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -102,9 +103,15 @@
   </div>
 
   <script>
-    document.getElementById('regForm').addEventListener('submit', function (e) {
+    const form = document.getElementById('regForm');
+    form.addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Step 1 complete. Proceeding to Step 2...');
+      if (form.checkValidity()) {
+        alert('Step 1 complete. Proceeding to Step 2...');
+      }
+    });
+    document.querySelector('.btn-secondary').addEventListener('click', function () {
+      window.location.hash = 'login';
     });
   </script>
 </body>
