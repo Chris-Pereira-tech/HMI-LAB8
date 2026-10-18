@@ -75,6 +75,18 @@ Where:
 
 ---
 
+## Comparative HCI Evaluation: Original vs. Redesign
+
+| Metric / Dimension | Original State CET Portal (Baseline) | Minimal Redesign (This Project) | Improvement / Impact |
+|---|---|---|---|
+| **Total Visible Elements ($N$)** | $\sim 115+$ elements | **Exactly 25 elements** | **$\approx 78\%$ reduction** in screen density |
+| **Visual Clutter & Noise** | High (marquee tickers, flashing alerts, ads) | **Zero noise** (no marquee, banners, ads, or icons) | Eliminates split-attention effect |
+| **Grid Alignment** | Multi-column, irregular visual axes ($> 6$ axes) | **Single vertical alignment axis** (8px grid) | Drastically reduces visual scan path length |
+| **Type Hierarchy** | $5+$ font sizes, arbitrary weights & colors | **2 sizes** (`20px` / `15px`), 1 font family | Clean, predictable reading rhythm |
+| **Color Usage** | Multicolored links, warning banners, fills | **2 colors + neutral gray** (accent on primary only) | High cognitive salience for primary action |
+
+---
+
 ## How to Run
 
 Open `index.html` directly in any web browser:
