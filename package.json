@@ -1,0 +1,20 @@
+{
+  "name": "mht-cet-redesign-hmi",
+  "version": "1.0.0",
+  "description": "Minimal MHT CET candidate registration redesign for HCI screen complexity analysis (Shannon Entropy N=25)",
+  "main": "index.html",
+  "scripts": {
+    "test": "node test/verify-inventory.js",
+    "start": "node -e \"require('child_process').exec('start index.html')\""
+  },
+  "keywords": [
+    "hci",
+    "human-computer-interaction",
+    "shannon-entropy",
+    "screen-complexity",
+    "mht-cet",
+    "minimal-ui"
+  ],
+  "author": "Chris Pereira",
+  "license": "MIT"
+}
