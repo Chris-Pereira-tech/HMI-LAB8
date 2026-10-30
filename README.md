@@ -44,6 +44,34 @@ The design adheres to a strict inventory of exactly **25 visible functional elem
 - **Visual Grouping**: Grouped into *Personal details* and *Exam details* using 32px whitespace rather than borders or visual clutter.
 - **Accessibility & Responsiveness**: Fully responsive across mobile and desktop; explicit label associations (`for`/`id`), visible 2px focus outlines, and high contrast ratios.
 
+### Visual Layout Architecture
+
+```mermaid
+graph TD
+  A["Header: Logo & Navigation Links (5 elements)"]
+  B["Progressive Disclosure: Step 1 of 3"]
+  C["Block 1: Personal Details (8 elements)"]
+  D["Block 2: Exam Details (6 elements)"]
+  E["Declaration: Checkbox (1 element)"]
+  F["Action Area: Continue & Login Buttons (2 elements)"]
+  G["Footer: Navigation Links (3 elements)"]
+
+  A --> B --> C --> D --> E --> F --> G
+```
+
+### Design Tokens
+
+| Token | Value | Role |
+|---|---|---|
+| `color-accent` | `#1d4ed8` | Primary button fill & active focus outline |
+| `color-text-primary` | `#111827` | Headings, labels, and input value text |
+| `color-text-muted` | `#6b7280` | Navigation links and footer text |
+| `color-border` | `#d1d5db` | Input and dropdown borders |
+| `color-bg` | `#ffffff` | Clean background surface |
+| `font-size-heading` | `20px` (700 weight) | Header logo & step heading |
+| `font-size-body` | `15px` (400/500 weight) | All labels, inputs, selects, and buttons |
+| `spacing-grid` | `8px` | Base unit (`8px, 16px, 24px, 32px, 48px`) |
+
 ---
 
 ## Shannon Screen Complexity Calculation
