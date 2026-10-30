@@ -26,24 +26,24 @@
       <!-- Progressive disclosure heading (plain text, excluded from 25-element inventory per specification) -->
       <h1 class="heading">Step 1 of 3</h1>
 
-      <form id="regForm">
+      <form id="regForm" aria-label="Candidate Registration Step 1">
         <!-- Group 3: Personal details (8 elements: 4 field labels, 4 text inputs) -->
         <div class="form-block">
           <div class="field">
             <label for="fullName">Full Name</label>
-            <input type="text" id="fullName" name="fullName" placeholder="As per SSC Marksheet" autocomplete="name" required>
+            <input type="text" id="fullName" name="fullName" placeholder="As per SSC Marksheet" autocomplete="name" aria-required="true" required>
           </div>
           <div class="field">
             <label for="mobile">Mobile Number</label>
-            <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" required>
+            <input type="tel" id="mobile" name="mobile" placeholder="10-digit mobile number" autocomplete="tel" inputmode="numeric" pattern="[0-9]{10}" aria-required="true" required>
           </div>
           <div class="field">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" required>
+            <input type="email" id="email" name="email" placeholder="name@example.com" autocomplete="email" aria-required="true" required>
           </div>
           <div class="field">
             <label for="dob">Date of Birth</label>
-            <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" autocomplete="bday" required>
+            <input type="text" id="dob" name="dob" placeholder="DD/MM/YYYY" autocomplete="bday" aria-required="true" required>
           </div>
         </div>
 
