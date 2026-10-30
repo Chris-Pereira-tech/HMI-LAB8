@@ -118,6 +118,11 @@
       this.value = v;
     });
 
+    const sanitize = (s) => s.replace(/[<>]/g, '').trim();
+    document.querySelectorAll('input[type="text"], input[type="email"]').forEach((inp) => {
+      inp.addEventListener('blur', function () { this.value = sanitize(this.value); });
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (form.checkValidity()) {
