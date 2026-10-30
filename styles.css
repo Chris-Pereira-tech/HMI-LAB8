@@ -67,3 +67,7 @@ input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px s
 .btn-secondary { background-color: #ffffff; color: #111827; border: 1px solid #d1d5db; }
 .btn-secondary:hover { background-color: #f9fafb; }
 .footer { margin-top: 48px; justify-content: center; }
+@media print {
+  .nav, .footer, .btn-group { display: none; }
+  .page-container { padding: 0; }
+}
