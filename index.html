@@ -123,6 +123,13 @@
       inp.addEventListener('blur', function () { this.value = sanitize(this.value); });
     });
 
+    form.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.tagName === 'INPUT' && !form.checkValidity()) {
+        const invalid = form.querySelector(':invalid');
+        if (invalid) invalid.focus();
+      }
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (form.checkValidity()) {
