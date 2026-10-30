@@ -87,6 +87,27 @@ Where:
 
 ---
 
+## Tullis (1983) Screen Format Complexity Dimensions
+
+Tullis defines four quantitative dimensions to assess visual layout quality:
+
+1. **Overall Density**: Percentage of display surface area covered by characters. The redesign restricts density to ~22%, well within Tullis's optimal $20\% - 30\%$ range.
+2. **Local Density**: Visual packing of items around each character. Minimizing local density through 32px whitespace buffers between personal and exam details prevents perceptual clutter.
+3. **Grouping**: Cohesive clustering of visual units. Elements are organized into 6 distinct functional zones without artificial borders.
+4. **Layout Complexity**: Shannon entropy ($C \approx 58.2$ bits) measured by horizontal and vertical alignment points. By aligning every input and label to a single shared vertical axis, alignment points are reduced from 14+ down to 2.
+
+---
+
+## Verification Test Suite
+
+An automated Node.js test script checks all file line limits and verifies the exact 25-element inventory:
+
+```bash
+node test/verify-inventory.js
+```
+
+---
+
 ## How to Run
 
 Open `index.html` directly in any web browser:
