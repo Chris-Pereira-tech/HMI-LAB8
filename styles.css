@@ -71,3 +71,4 @@ input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px s
   .nav, .footer, .btn-group { display: none; }
   .page-container { padding: 0; }
 }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
