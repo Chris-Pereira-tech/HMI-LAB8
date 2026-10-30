@@ -38,10 +38,8 @@ input[type="text"], input[type="tel"], input[type="email"], select {
   font-family: inherit;
   font-size: 15px;
 }
-input:focus, select:focus, button:focus {
-  outline: 2px solid #111827;
-  outline-offset: 1px;
-}
+input:focus, select:focus, button:focus { outline: 2px solid #111827; outline-offset: 1px; }
+input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px solid #1d4ed8; outline-offset: 1px; }
 .radio-field { display: flex; gap: 24px; padding-top: 8px; }
 .radio-label, .checkbox-label {
   display: inline-flex;
@@ -61,8 +59,9 @@ input:focus, select:focus, button:focus {
   font-size: 15px;
   font-weight: 500;
   cursor: pointer;
-  transition: background-color 0.15s ease, border-color 0.15s ease;
+  transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.05s ease;
 }
+.btn:active { transform: translateY(1px); }
 .btn-primary { background-color: #1d4ed8; color: #ffffff; border: 1px solid #1d4ed8; }
 .btn-primary:hover { background-color: #1e40af; }
 .btn-secondary { background-color: #ffffff; color: #111827; border: 1px solid #d1d5db; }
