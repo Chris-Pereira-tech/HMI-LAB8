@@ -123,6 +123,10 @@
       inp.addEventListener('blur', function () { this.value = sanitize(this.value); });
     });
 
+    form.addEventListener('input', function (e) {
+      if (e.target.setCustomValidity) e.target.setCustomValidity('');
+    });
+
     form.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' && e.target.tagName === 'INPUT' && !form.checkValidity()) {
         const invalid = form.querySelector(':invalid');
