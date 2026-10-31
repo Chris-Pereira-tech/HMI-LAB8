@@ -4,10 +4,11 @@
   "description": "Minimal MHT CET candidate registration redesign for HCI screen complexity analysis (Shannon Entropy N=25)",
   "main": "index.html",
   "scripts": {
-    "test": "node test/verify-inventory.js && node test/shannon-complexity.test.js && node test/a11y-wcag.test.js",
+    "test": "node test/verify-inventory.js && node test/shannon-complexity.test.js && node test/a11y-wcag.test.js && node test/screen-density.test.js",
     "test:inventory": "node test/verify-inventory.js",
     "test:shannon": "node test/shannon-complexity.test.js",
     "test:a11y": "node test/a11y-wcag.test.js",
+    "test:density": "node test/screen-density.test.js",
     "start": "node -e \"require('child_process').exec('start index.html')\""
   },
   "keywords": [
