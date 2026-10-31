@@ -128,11 +128,20 @@ Tullis defines four quantitative dimensions to assess visual layout quality:
 
 ## Verification Test Suite
 
-An automated Node.js test script checks all file line limits and verifies the exact 25-element inventory:
+The project includes an automated multi-stage test suite covering line constraints, Shannon complexity, WCAG contrast, and Tullis screen density:
 
 ```bash
-node test/verify-inventory.js
+# Run all automated verification tests
+npm test
+
+# Run individual test suites
+npm run test:inventory   # Verifies exact N=25 elements and line budgets
+npm run test:shannon     # Validates Shannon entropy (H) and complexity (C)
+npm run test:a11y        # Validates WCAG 2.1 AA color contrast & label pairings
+npm run test:density     # Validates character density and alignment axes
 ```
+
+For the comprehensive research methodology, empirical calculations, and theoretical derivation, see the [HCI Shannon Complexity Report](docs/hci-shannon-report.md).
 
 ---
 
