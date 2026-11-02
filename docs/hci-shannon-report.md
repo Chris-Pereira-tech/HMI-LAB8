@@ -55,7 +55,23 @@ Tullis established four primary quantitative dimensions for alphanumeric display
 
 ---
 
-## 4. Accessibility Compliance (WCAG 2.1 AA)
+## 4. Cognitive Load & Hick-Hyman Law Analysis
+
+Hick-Hyman Law models the time $T$ required for a user to make a decision as a logarithmic function of the number of available options $n$:
+
+$$T = b \cdot \log_2(n + 1)$$
+
+Where $b$ represents an empirical cognitive processing constant ($\approx 150 - 200\text{ ms/bit}$).
+
+| Dimension | Baseline State CET Portal | Minimal Redesign | Cognitive Advantage |
+|---|---|---|---|
+| **Landing Navigation Choices ($n$)** | $n \approx 42$ heterogeneous links | $n = 4$ uniform links | Decision time reduced from $\approx 5.43\text{ bits}$ to $\approx 2.32\text{ bits}$ ($\approx 57\%$ faster) |
+| **Primary Form Decision Branching** | Competing modal/button options ($n \ge 6$) | $n = 2$ buttons (`Continue` / `Login`) | Binary choice minimizes deliberation overhead ($\log_2(3) \approx 1.58\text{ bits}$) |
+| **Subject Group Selection** | Nested checkbox/dropdown combinations | $n = 2$ mutual radios (`PCM` / `PCB`) | 1-bit binary selection eliminates decision hesitation |
+
+---
+
+## 5. Accessibility Compliance (WCAG 2.1 AA)
 
 All color combinations have been mathematically validated using W3C luminance formulas:
 - Primary text on white: **17.74 : 1** (Exceeds WCAG AAA requirement of 7:1)
@@ -64,10 +80,11 @@ All color combinations have been mathematically validated using W3C luminance fo
 
 ---
 
-## 5. Automated Verification Summary
+## 6. Automated Verification Summary
 
-All constraints are continuously verified via four standalone automated test suites:
+All constraints are continuously verified via five standalone automated test suites:
 - `verify-inventory.js`: Verifies exact $N = 25$ visible elements and line count budgets.
 - `shannon-complexity.test.js`: Verifies entropy $H \in [2.32, 2.34]$ and complexity $C \in [58.0, 58.5]$.
 - `a11y-wcag.test.js`: Verifies color contrast ratios and label pairings.
 - `screen-density.test.js`: Verifies character density and layout alignment axes.
+- `html-conformance.test.js`: Verifies HTML5 doctype, UTF-8 charset, and ID uniqueness.
