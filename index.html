@@ -105,45 +105,35 @@
 
   <script>
     const form = document.getElementById('regForm');
-    const mobileInput = document.getElementById('mobile');
-    const dobInput = document.getElementById('dob');
+    const sanitize = (s) => s.replace(/[<>]/g, '').trim();
 
-    mobileInput.addEventListener('input', function () {
+    document.getElementById('mobile').addEventListener('input', function () {
       this.value = this.value.replace(/\D/g, '').slice(0, 10);
     });
 
-    dobInput.addEventListener('input', function () {
+    document.getElementById('dob').addEventListener('input', function () {
       let v = this.value.replace(/\D/g, '').slice(0, 8);
-      if (v.length >= 5) v = v.slice(0, 2) + '/' + v.slice(2, 4) + '/' + v.slice(4);
-      else if (v.length >= 3) v = v.slice(0, 2) + '/' + v.slice(2);
+      if (v.length >= 5) v = `${v.slice(0, 2)}/${v.slice(2, 4)}/${v.slice(4)}`;
+      else if (v.length >= 3) v = `${v.slice(0, 2)}/${v.slice(2)}`;
       this.value = v;
     });
 
-    const sanitize = (s) => s.replace(/[<>]/g, '').trim();
     document.querySelectorAll('input[type="text"], input[type="email"]').forEach((inp) => {
-      inp.addEventListener('blur', function () { this.value = sanitize(this.value); });
+      inp.addEventListener('blur', () => { inp.value = sanitize(inp.value); });
     });
 
-    form.addEventListener('input', function (e) {
-      if (e.target.setCustomValidity) e.target.setCustomValidity('');
-    });
-
-    form.addEventListener('keydown', function (e) {
+    form.addEventListener('input', (e) => e.target.setCustomValidity?.(''));
+    form.addEventListener('keydown', (e) => {
       if (e.key === 'Enter' && e.target.tagName === 'INPUT' && !form.checkValidity()) {
-        const invalid = form.querySelector(':invalid');
-        if (invalid) invalid.focus();
+        form.querySelector(':invalid')?.focus();
       }
     });
 
-    form.addEventListener('submit', function (e) {
+    form.addEventListener('submit', (e) => {
       e.preventDefault();
-      if (form.checkValidity()) {
-        alert('Step 1 complete. Proceeding to Step 2...');
-      }
+      if (form.checkValidity()) alert('Step 1 complete. Proceeding to Step 2...');
     });
-    document.querySelector('.btn-secondary').addEventListener('click', function () {
-      window.location.hash = 'login';
-    });
+    document.querySelector('.btn-secondary').addEventListener('click', () => { window.location.hash = 'login'; });
   </script>
 </body>
 </html>
