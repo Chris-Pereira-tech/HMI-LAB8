@@ -1,5 +1,12 @@
 # MHT CET Candidate Registration — Minimal UI Redesign (HMI Lab 8)
 
+[![CI](https://github.com/Chris-Pereira-tech/HMI-LAB8/actions/workflows/ci.yml/badge.svg)](https://github.com/Chris-Pereira-tech/HMI-LAB8/actions)
+![Elements](https://img.shields.io/badge/Elements-Exact%20N%3D25-blue)
+![Shannon Entropy](https://img.shields.io/badge/Shannon%20Entropy-H%E2%89%882.33%20bits-success)
+![Screen Complexity](https://img.shields.io/badge/Screen%20Complexity-C%E2%89%8858.2%20bits-informational)
+![WCAG](https://img.shields.io/badge/WCAG%202.1-AA%20Compliant-brightgreen)
+![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20External-orange)
+
 A single-page, static redesign of the Maharashtra Common Entrance Test (MHT CET) candidate registration portal, built with pure HTML and CSS (no frameworks, no external images, no CDN dependencies).
 
 Designed for an **HCI / Human-Machine Interaction assignment on minimizing screen complexity**, optimized for calculating Shannon screen complexity.
@@ -128,7 +135,7 @@ Tullis defines four quantitative dimensions to assess visual layout quality:
 
 ## Verification Test Suite
 
-The project includes an automated multi-stage test suite covering line constraints, Shannon complexity, WCAG contrast, and Tullis screen density:
+The project includes an automated multi-stage test suite covering line constraints, Shannon complexity, WCAG contrast, Tullis screen density, HTML5 semantics, and zero-dependency budgets:
 
 ```bash
 # Run all automated verification tests
@@ -139,9 +146,12 @@ npm run test:inventory   # Verifies exact N=25 elements and line budgets
 npm run test:shannon     # Validates Shannon entropy (H) and complexity (C)
 npm run test:a11y        # Validates WCAG 2.1 AA color contrast & label pairings
 npm run test:density     # Validates character density and alignment axes
+npm run test:html        # Validates HTML5 doctype, UTF-8 charset, & ID uniqueness
+npm run test:perf        # Validates performance budget & zero external dependencies
 ```
 
-For the comprehensive research methodology, empirical calculations, and theoretical derivation, see the [HCI Shannon Complexity Report](docs/hci-shannon-report.md).
+- **Research Report**: Detailed methodology, empirical calculations, and Hick-Hyman Law analysis are documented in the [HCI Shannon Complexity Report](docs/hci-shannon-report.md).
+- **Spatial Wireframe**: Full 8px grid layout map is available in the [ASCII Layout Wireframe](docs/wireframe.txt).
 
 ---
 
