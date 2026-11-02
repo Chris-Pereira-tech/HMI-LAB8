@@ -5,6 +5,7 @@ body {
   line-height: 1.5;
   color: #111827;
   background-color: #ffffff;
+  color-scheme: light;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
