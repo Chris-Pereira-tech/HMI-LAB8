@@ -1,0 +1,67 @@
+================================================================================
+ MHT CET REDESIGN - SPATIAL GRID & ELEMENT WIREFRAME (N = 25)
+================================================================================
+
+ Layout Constraints:
+ - Viewport: Responsive centered column (max-width: 480px)
+ - Base Spacing Grid: 8px increments (8px, 16px, 24px, 32px, 48px)
+ - Typographic Hierarchy: 2 sizes only (Heading: 20px, Body: 15px)
+ - Alignment: Single shared vertical axis (Left margin 0 within container)
+
+--------------------------------------------------------------------------------
+ [Visual Axis: Left Edge]                                 [Right Edge]
+--------------------------------------------------------------------------------
+
+ +----------------------------------------------------------------------------+
+ | [1] MHT CET (Logo)             [2] Register  Login  Important Dates  Help  |
+ +----------------------------------------------------------------------------+
+                                                                  (margin: 32px)
+ Step 1 of 3 (Heading - Progressive disclosure state indicator)
+                                                                  (margin: 24px)
+ [Personal Details Group] (8 elements)
+ +----------------------------------------------------------------------------+
+ | [3] Full Name                                                              |
+ | [4] [ As per SSC Marksheet                                               ] |
+ |                                                                            |
+ | [5] Mobile Number                                                          |
+ | [6] [ 10-digit mobile number                                             ] |
+ |                                                                            |
+ | [7] Email                                                                  |
+ | [8] [ name@example.com                                                   ] |
+ |                                                                            |
+ | [9] Date of Birth                                                          |
+ | [10] [ DD/MM/YYYY                                                        ] |
+ +----------------------------------------------------------------------------+
+                                                    (whitespace buffer: 32px)
+ [Exam Details Group] (6 elements)
+ +----------------------------------------------------------------------------+
+ | [11] Category                                                              |
+ | [12] [ Select category                                                 v ] |
+ |                                                                            |
+ | [13] Domicile                                                              |
+ | [14] [ Select domicile state                                           v ] |
+ |                                                                            |
+ | (o) [15] PCM       ( ) [16] PCB                                            |
+ +----------------------------------------------------------------------------+
+                                                    (whitespace buffer: 32px)
+ [Declaration Group] (1 element)
+ +----------------------------------------------------------------------------+
+ | [X] [17] I confirm the details are correct                                 |
+ +----------------------------------------------------------------------------+
+                                                    (whitespace buffer: 32px)
+ [Action Button Group] (2 elements)
+ +----------------------------------------------------------------------------+
+ | [ [18] Continue (Primary #1d4ed8) ]   [ [19] Login (Secondary Outline) ]  |
+ +----------------------------------------------------------------------------+
+                                                                  (margin: 48px)
+ [Footer Navigation] (3 elements)
+ +----------------------------------------------------------------------------+
+ |                     [20] Contact   [21] Privacy   [22] Help                |
+ +----------------------------------------------------------------------------+
+
+================================================================================
+ Verification Audit:
+ Visible Elements = 1 (Logo) + 4 (Nav) + 6 (Labels) + 4 (Inputs)
+                    + 2 (Selects) + 2 (Radios) + 1 (Checkbox) + 2 (Buttons)
+                    + 3 (Footer Links) = EXACTLY 25 ELEMENTS.
+================================================================================
