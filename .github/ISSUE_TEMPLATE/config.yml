@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: HCI Shannon Complexity Report
+    url: https://github.com/Chris-Pereira-tech/HMI-LAB8/blob/main/docs/hci-shannon-report.md
+    about: Read the mathematical derivation of screen complexity and Tullis metrics

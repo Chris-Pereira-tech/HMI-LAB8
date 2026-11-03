@@ -1,0 +1,37 @@
+name: Usability & Screen Complexity Defect
+description: Report an HCI screen complexity regression, accessibility barrier, or layout violation
+title: "[HCI Defect]: "
+labels: ["hci-defect", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an HCI screen complexity defect or usability barrier!
+        Please ensure the observation relates to the Shannon entropy, Tullis layout dimensions, or WCAG 2.1 AA criteria.
+  - type: dropdown
+    id: category
+    attributes:
+      label: Defect Classification
+      description: Select the primary HCI evaluation category this issue affects.
+      options:
+        - Shannon Entropy & Element Count (Target N=25)
+        - Tullis Display Density or Alignment Axes
+        - Fitts' Law Target Acquisition & Touch Sizing
+        - Hick-Hyman Law & Decision Latency
+        - WCAG 2.1 AA Color Contrast or Semantic Labeling
+        - Performance Budget or Zero-Dependency Constraint
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Observation
+      description: Describe the observed behavior and why it introduces unnecessary cognitive friction.
+      placeholder: E.g., Adding a field increases N beyond 25, causing Shannon Entropy to diverge...
+    validations:
+      required: true
+  - type: textarea
+    id: proposed_fix
+    attributes:
+      label: Proposed Minimal Redesign Solution
+      description: Propose a solution adhering to strict whitespace grouping and zero visual clutter.
