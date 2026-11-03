@@ -30,3 +30,6 @@ jobs:
 
       - name: Run HTML Conformance & Performance Budget Tests
         run: npm run test:html && npm run test:perf
+
+      - name: Run Security Headers & Fitts Law Ergonomics Tests
+        run: npm run test:security && npm run test:fitts
