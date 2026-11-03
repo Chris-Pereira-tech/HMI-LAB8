@@ -51,6 +51,7 @@ input:focus-visible, select:focus-visible, button:focus-visible { outline: 2px s
   font-size: 15px;
   font-weight: 400;
   cursor: pointer;
+  accent-color: #1d4ed8;
 }
 .checkbox-field { margin-bottom: 32px; }
 .btn-group { display: flex; gap: 16px; }
