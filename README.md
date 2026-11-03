@@ -5,6 +5,7 @@
 ![Shannon Entropy](https://img.shields.io/badge/Shannon%20Entropy-H%E2%89%882.33%20bits-success)
 ![Screen Complexity](https://img.shields.io/badge/Screen%20Complexity-C%E2%89%8858.2%20bits-informational)
 ![WCAG](https://img.shields.io/badge/WCAG%202.1-AA%20Compliant-brightgreen)
+![Fitts Law ID](https://img.shields.io/badge/Fitts'%20Law%20ID-0.455%20bits-blueviolet)
 ![Zero Dependencies](https://img.shields.io/badge/Dependencies-0%20External-orange)
 
 A single-page, static redesign of the Maharashtra Common Entrance Test (MHT CET) candidate registration portal, built with pure HTML and CSS (no frameworks, no external images, no CDN dependencies).
@@ -133,9 +134,22 @@ Tullis defines four quantitative dimensions to assess visual layout quality:
 
 ---
 
+## Fitts' Law (1954) & Motor Acquisition Efficiency
+
+Target acquisition time is modeled using the Shannon formulation of Fitts' Law:
+
+$$ID = \log_2\left(\frac{D}{W} + 1\right)$$
+
+- **Primary Button Target Width ($W$)**: Expanded from $\approx 55\text{px}$ (legacy links) to **$216\text{px}$** (flex block button).
+- **Travel Distance ($D$)**: Reduced from $\approx 320\text{px}$ down to **$80\text{px}$** along the direct vertical column.
+- **Index of Difficulty ($ID$)**: Reduced from **$2.769\text{ bits}$** down to **$0.455\text{ bits}$** (**$83.6\%$ reduction in motor acquisition difficulty**).
+- **Target Height ($40\text{px}$)**: Satisfies WCAG 2.5.8 pointer target sizing standards.
+
+---
+
 ## Verification Test Suite
 
-The project includes an automated multi-stage test suite covering line constraints, Shannon complexity, WCAG contrast, Tullis screen density, HTML5 semantics, and zero-dependency budgets:
+The project includes an automated multi-stage test suite covering line constraints, Shannon complexity, WCAG contrast, Tullis screen density, HTML5 semantics, zero-dependency budgets, security policies, and Fitts' Law ergonomics:
 
 ```bash
 # Run all automated verification tests
@@ -148,6 +162,8 @@ npm run test:a11y        # Validates WCAG 2.1 AA color contrast & label pairings
 npm run test:density     # Validates character density and alignment axes
 npm run test:html        # Validates HTML5 doctype, UTF-8 charset, & ID uniqueness
 npm run test:perf        # Validates performance budget & zero external dependencies
+npm run test:security    # Validates CSP directives, nosniff, & input sanitization
+npm run test:fitts       # Validates Fitts' Law Index of Difficulty & 40px touch sizing
 ```
 
 - **Research Report**: Detailed methodology, empirical calculations, and Hick-Hyman Law analysis are documented in the [HCI Shannon Complexity Report](docs/hci-shannon-report.md).
